@@ -5,7 +5,7 @@ Docs 8-28-23 V1 (For questions or comments:  Stephen Witty switty@level500.com)
 
 With a tip of the hat to the 1983 movie WarGames, this project seeks to force ChatGPT to play continuous games of Tic-Tac-Toe against itself or in WarGames vernacular - Number of Players Zero.  Stats are kept throughout gameplay and displayed.  Each move in the game is a new ChatGPT prompt and its corresponding answer on what it thinks is the best move.   ChatGPT is both players in the game.  Python is used with the OpenAI API to drive gameplay while also storing board and game results.
 
-<img src="Pics/AI_Tic_Tac_Toe.png" width="400">
+<img src="Pics/AI_Tic_Tac_Toe.png" width="800">
 
 ### Demo Video:
 https://www.youtube.com/watch?v=2nmLmqTtfCw&t=72s
