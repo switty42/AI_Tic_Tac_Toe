@@ -4,6 +4,7 @@
 # Example code from rollbar.com - GPT example
 #
 # V1 8-26-23 - Initial release / dev
+# V2 9-12-23 - Add timeout to GPT
 #
 # Notes - Add your OpenAI key below
 # Change Linux constant below for correct clear screen command for your OS
@@ -14,7 +15,7 @@ import sys
 import os
 
 # Put OpenAI API key here
-openai.api_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+openai.api_key = "XXXXXXXXXXXXXXXXXXXXX"
 
 # Uncomment GPT model desired here
 #gpt_model='gpt-3.5-turbo'
@@ -70,7 +71,7 @@ def print_string(string):
 def call_gpt(prompt_message):
    global error_text
    try:
-      response = openai.ChatCompletion.create(model=gpt_model, messages=[ {"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": prompt_message},])
+      response = openai.ChatCompletion.create(model=gpt_model, messages=[ {"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": prompt_message}],request_timeout=25)
    except Exception as e:
       error_text = "WARNING: System Error during ChatGPT call: " + str(e)
       return ""
